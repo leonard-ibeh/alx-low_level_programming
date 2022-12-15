@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * main - This program prints the phrase _putchar
+ * main -print _putchar
+ *
  * Return: 0
  */
+
 int main(void)
 {
 	char ch[] = "_putchar";
