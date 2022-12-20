@@ -1,16 +1,40 @@
 #include "main.h"
-/**
- * _strcpy - copy the string pointed to by scr to dest
- * @dest: char to check
- * @scr: char to check
- * Return: 0 is success
- */
-char *_strcpy(char *dest, char *scr)
-{
-	int a;
 
-	for (a = 0; src[a] != '\0'; a++)
-		dest[a] = src[a];
-	dest[a] = '\0';
+/**
+ * _strlen - returns the length of a string
+ * @s: first int to swap
+ * Return: string length
+ */
+
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (*s != '\0')
+	{
+		length++;
+		s++;
+	}
+
+	return (length);
+}
+
+/**
+ * _strcpy - copies the string pointed to by 'src', including the
+ * terminating nnull byte(\0), to the buffer pointed to by 'dest'
+ * @src: pointer to string to be copied
+ * @dest: pointer to buffer to be copied to
+ * Return: pointer to 'dest'
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	while (i <= _strlen(src))
+	{
+		dest[i] = src[i];
+		i++;
+	}
 	return (dest);
 }
