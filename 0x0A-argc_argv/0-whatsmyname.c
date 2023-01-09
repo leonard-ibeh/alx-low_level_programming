@@ -33,7 +33,7 @@ void print_string(char *str)
 {
 	int i = 0;
 
-	while (str[str] != '\0')
+	while (str[i] != '\0')
 	{
 		putchar(str[i]);
 		i++;
