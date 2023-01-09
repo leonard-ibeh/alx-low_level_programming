@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < argc; i++)
 	{
-		print_array_elements(argv[i]);
+		print_array_element(argv[i]);
 		_putchar('\n');
 	}
 
