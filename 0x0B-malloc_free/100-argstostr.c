@@ -3,7 +3,7 @@
 /**
  * free_grid - Free a 2 dimensional grid previously created by your
  *
- * alloc_grid Function
+ * alloc_grid function
  *
  * @grid: The grid we'll freee up
  * @height: The number of rows in the grid
