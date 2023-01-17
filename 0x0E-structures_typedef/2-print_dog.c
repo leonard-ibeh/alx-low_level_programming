@@ -1,59 +1,25 @@
-#include <stdlib.h>
+#include <stdio.h>
 #include "dog.h"
 
-int _strlen(char *str);
-void fillMen(char *str, int strlen, char *dest);
 
 /**
- * new_dog - Creates a new dog
+ * print_dog - prints a struct dog
+ * @d: pointer to structure
  *
- * @name: Name of dog
- *
- * @age: Age of dog
- *
- * @owner: Owner of dog
- *
- * Return: Pointer to the newly created dog (SUCCESS) or
- * NULL if insufficient memory was available (FAILURE)
+ * Return: void
  */
-
-dog_t *new_dog(char *name, float age, char *owner)
+void print_dog(struct dog *d)
 {
-	dog_t *n_dog;
-	int nameLen, ownerLen;
-
-	n_dog = malloc(sizeof(dog_t));
-
-	if (n_dog == NULL)
-		return (NULL);
-
-	nameLen = _strLen(name);
-	n_dog->name = malloc(sizeof(char) * nameLen + 1);
-
-	if (n_dog->name == NULL)
+	if (d != NULL)
 	{
-		free(n_dog);
-		return (NULL);
+		if (d->name != NULL)
+			printf("Name: %s\n", d->name);
+		else
+			printf("Name: (nil)\n");
+		printf("Age: %.6f\n", d->age);
+		if (d->owner != NULL)
+			printf("Owner: %s\n", d->owner);
+		else
+			printf("Owner: (nil)\n");
 	}
-
-fillMem(name, nameLen, n_dog->name);
-
-
-fillMem(name, nameLen, n_dog->name);
-
-ownerLen = _strlen(owner);
-n_dog->owner = malloc(sizeof(char) * ownerLen + 1);
-
-if (n_dog->owner == NULL)
-{
-	free(n_dog);
-	free(n_dog->name);
-	return (NULL);
-}
-fillMem(owner, ownerLen, n_dog->owner);
-
-n_dog->age = age;
-
-return (n_dog);
-
 }
