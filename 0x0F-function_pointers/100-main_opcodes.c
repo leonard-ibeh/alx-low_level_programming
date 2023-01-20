@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * print_opcodes - print the opcodes of this program
@@ -18,7 +18,7 @@ void print_opcodes(char *a, int n)
 		if (i < n - 1)
 			printf(" ");
 	}
-	print("\n");
+	printf("\n");
 
 }
 
